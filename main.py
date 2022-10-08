@@ -35,7 +35,7 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-TELEGRAM_BOT_TOKEN = '5499476254:AAH2kCbL3ZZ8o70ra0D-yCJxMiDtVc8XGbA'
+TELEGRAM_BOT_TOKEN = '5499476254:AAH2kCbL3ZZ8o70ra0D-yCJxMiDtVc8XGbA'  # test token
 CHANNEL_LINK = 'https://t.me/prmngr'
 CHANNEL_USERNAME = '@prmngr'
 
@@ -151,6 +151,7 @@ async def football_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     txt = ""
 
     scrapeable = scraper.scrape_data()
+    print(scrapeable)
 
     if scrapeable:
         for i in scrapeable:
